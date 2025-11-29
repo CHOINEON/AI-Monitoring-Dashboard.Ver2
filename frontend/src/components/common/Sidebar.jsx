@@ -8,10 +8,10 @@ import { useAppStore } from "@/hooks/useAppStore";
 // import { ReactComponent as XaiIcon } from '../../assets/icons/xai.svg';
 
 const navItems = [
-   { to: "/", label: "홈 (대시보드)", icon: "🏠" }, 
-   { to: "/hhps", label: "HHPS 가이던스", icon: "📊" }, 
-   { to: "/rhds", label: "RHDS 가이던스", icon: "📈" }, 
-   { to: "/xai", label: "Explainable AI", icon: "💡" }, 
+   { to: "/", label: "홈 (대시보드)"}, 
+   { to: "/hhps", label: "HHPS 가이던스"}, 
+   { to: "/rhds", label: "RHDS 가이던스" }, 
+   { to: "/xai", label: "Explainable AI"}, 
 ];
 
 const Sidebar = () => {
