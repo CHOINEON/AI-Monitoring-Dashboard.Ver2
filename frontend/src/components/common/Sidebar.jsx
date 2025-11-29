@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useAppStore from '../../hooks/useAppStore'; 
+import { useAppStore } from "@/hooks/useAppStore";
 // 추후 아이콘 임포트 예정
 // import { ReactComponent as HomeIcon } from '../../assets/icons/dashboard.svg';
 // import { ReactComponent as HhpsIcon } from '../../assets/icons/hhps.svg';
