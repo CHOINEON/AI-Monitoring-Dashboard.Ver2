@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// import HeaderBg from '../../assets/images/header-bg.svg'; 
+// import Logo from '@/assets/images/logo.png'; 
+//추후 로고 첨부 예정
+
 
 const HeaderContainer = styled.header`
     height: 50px;

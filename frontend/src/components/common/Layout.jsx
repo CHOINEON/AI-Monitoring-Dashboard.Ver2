@@ -1,7 +1,7 @@
 import React from 'react';
-import Sidebar from './Sidebar';
-import Header from './Header';
-// Styled Components 적용 예정
+import Header from '@/components/common/Header'; 
+import Sidebar from '@/components/common/Sidebar'; 
+
 
 const Layout = ({ children }) => {
   return (
