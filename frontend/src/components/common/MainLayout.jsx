@@ -11,18 +11,7 @@ const MainLayout = ({ children, collapsed, setCollapsed, colorBgContainer, borde
     <Layout>
       {/* 1. antd Header 적용*/}
       <Header style={{ padding: 0, background: colorBgContainer,}}>
-        
-        {/* 토글 버튼  */}
-        <Button
-          type="text"
-          icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-          onClick={() => setCollapsed(!collapsed)}
-          style={{
-            fontSize: '16px',
-            width: 64,
-            height: 64,
-          }}
-        />
+
         
         {/* 사용자 정의 헤더 내용 (로고, 제목 등) */}
         <HeaderContent title="No. 2 RHDS Fractionator, Separator 최적화" />

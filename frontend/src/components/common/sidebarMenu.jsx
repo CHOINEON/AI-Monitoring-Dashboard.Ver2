@@ -1,9 +1,9 @@
 import React from 'react';
-import { Menu } from 'antd';
-import { HomeOutlined, AreaChartOutlined, LineChartOutlined, BulbOutlined } from '@ant-design/icons';
-import { Link, useLocation } from 'react-router-dom'; // 라우팅 정보 사용
+import { Menu, Button } from 'antd';
+import { HomeOutlined, AreaChartOutlined, LineChartOutlined, BulbOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
+import { Link, useLocation } from 'react-router-dom'; 
 
-//  Menu items를 구성하는 함수 (Link와 연결)
+//  Menu items 구성 (Link와 연결)
 const getItem = (label, key, icon, children, type) => {
   // antd Menu Item의 label에 Link 컴포넌트 삽입
   const labelWithLink = <Link to={key}>{label}</Link>;
@@ -24,18 +24,32 @@ const menuItems = [
   getItem('Explainable AI', '/xai', <BulbOutlined />),
 ];
 
-const SidebarMenu = () => {
+const SidebarMenu = ({collapsed, setCollapsed}) => {
   const location = useLocation(); // 현재 경로
 
   return (
-    <Menu
-      theme="dark" 
-      mode="inline"
-      
-      selectedKeys={[location.pathname]} 
-      items={menuItems}
-      style={{ borderRight: 'none' }} 
-    />
+    <>
+      <div style={{ padding: '10px', textAlign: 'right' }}>
+        
+        <Button
+          type="text"
+          icon={collapsed ? <MenuUnfoldOutlined style={{ color: 'white' }} /> : <MenuFoldOutlined style={{ color: 'white' }} />}
+          onClick={() => setCollapsed(!collapsed)}
+          style={{
+            fontSize: '16px',
+            width: 40,
+            height: 40,
+          }}
+        />
+      </div>
+      <Menu
+        theme="dark" 
+        mode="inline"
+        selectedKeys={[location.pathname]} 
+        items={menuItems}
+        style={{ borderRight: 'none' }} 
+      />
+    </>
   );
 };
 

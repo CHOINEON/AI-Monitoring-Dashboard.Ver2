@@ -12,6 +12,7 @@ const { Sider } = Layout;
 
 function App() {
   const [collapsed, setCollapsed] = useState(false);
+
   const {
     token: {colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -27,12 +28,10 @@ function App() {
           theme="dark" // 또는 light
         >
           <div className="demo-logo" />
-          <SidebarMenu />
+          <SidebarMenu collapsed={collapsed} setCollapsed={setCollapsed}/>
         </Sider>
 
         <MainLayout 
-          collapsed={collapsed}
-          setCollapsed={setCollapsed}
           colorBgContainer={colorBgContainer}
           borderRadiusLG={borderRadiusLG}
         >
